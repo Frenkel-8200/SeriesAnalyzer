@@ -117,6 +117,8 @@ class SeriesAnalysis
     
     static string PromptAndReadInput(string messsage)
     {
+        Print(messsage);
+        return Console.ReadLine();
     }
 
     // Menu methods
