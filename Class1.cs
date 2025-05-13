@@ -62,6 +62,7 @@ class SeriesAnalysis
 
     static double[] ConvertArrayStringToDouble(string[] args)
     {
+        return Array.ConvertAll(args, double.Parse);
     }
 
     static bool UpdateSeries(string message)
