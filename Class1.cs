@@ -46,6 +46,9 @@ class SeriesAnalysis
 
     static double[] GetSortedSeries()
     {
+        double[] sortedArray = new double[series.Length];
+        Array.Copy(series, sortedArray, series.Length);
+        sortedArray = insertionSort(sortedArray);
     }
 
     static double GetMaxSeries()
@@ -70,6 +73,22 @@ class SeriesAnalysis
 
     static string Exit()
     {
+    }
+
+    static double[] insertionSort(double[] arr)
+    {
+        for (int i = 1; i < arr.Length; i++)
+        {
+            double current = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > current)
+            {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = current;
+        }
+        return arr;
     }
 
     static double[] ConvertArrayStringToDouble(string[] args)
