@@ -79,6 +79,7 @@ class SeriesAnalysis
 
     static double GetAvgSeries()
     {
+        return GetSumSeries() / series.Length;
     }
 
     static int GetCountSeries()
