@@ -72,6 +72,7 @@ class SeriesAnalysis
     // Validation methods
     static bool IsValidSeriesInput(string[] args)
     {
+        return HasLeastThreeArgs(args) && IsNumeric(args) && IsPositiveNums(args);
     }
 
     static bool IsValidOptionInput(string choice)
@@ -80,14 +81,33 @@ class SeriesAnalysis
 
     static bool HasLeastThreeArgs(string[] args)
     {
+        return args.Length >= 3;
     }
 
     static bool IsNumeric(string[] args)
     {
+        foreach (string arg in args)
+        {
+
+            if (!double.TryParse(arg, out _))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     static bool IsPositiveNums(string[] args)
     {
+        double[] intArgs = ConvertArrayStringToDouble(args);
+        foreach (int arg in intArgs)
+        {
+            if (arg < 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
 
