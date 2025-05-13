@@ -213,6 +213,17 @@ class SeriesAnalysis
     // Menu methods
     static string GetMenu()
     {
+        return "Menu:\n\n" +
+           "a. Input a Series\n" +
+           "b. Display the series in the order it was entered.\n" +
+           "c. Display the series in the reversed order it was entered.\n" +
+           "d. Display the series in sorted order (from low to high).\n" +
+           "e. Display the Max value of the series.\n" +
+           "f. Display the Min value of the series.\n" +
+           "g. Display the Average of the series.\n" +
+           "h. Display the Number of elements in the series.\n" +
+           "i. Display the Sum of the series.\n" +
+           "j. Exit\n";
     }
 
     static void HandleMenuOption()
