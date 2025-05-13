@@ -228,6 +228,15 @@ class SeriesAnalysis
 
     static void HandleMenuOption()
     {
+        string choice = PromptAndReadInput("Enter your choice:");
+        if (IsValidOptionInput(choice))
+        {
+            Print(menuOptions[choice]());
+        }
+        else
+        {
+            Print("Invalid choice. Please try again.");
+        }
     }
 
     // Main methods
