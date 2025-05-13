@@ -99,6 +99,9 @@ class SeriesAnalysis
 
     static string Exit()
     {
+        Print("Exiting the program...");
+        Environment.Exit(0);
+        return " ";
     }
 
     static double[] insertionSort(double[] arr)
