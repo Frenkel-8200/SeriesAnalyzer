@@ -242,13 +242,33 @@ class SeriesAnalysis
     // Main methods
     static void Initialize(string[] args)
     {
+        if (IsValidSeriesInput(args))
+        {
+            series = ConvertArrayStringToDouble(args);
+            return;
+        }
+        while (true)
+        {
+            if (UpdateSeries("Enter a series numbers:"))
+            {
+                break;
+            }
+            Print("Invalid input. Please try again.");
+        }
     }
 
     static void Run()
     {
+        while (true)
+        {
+            Print(GetMenu());
+            HandleMenuOption();
+        }
     }
 
     static void Main(string[] args)
     {
+        Initialize(args);
+        Run();
     }
 }
