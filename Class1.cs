@@ -31,6 +31,7 @@ class SeriesAnalysis
 
     static double[] GetOriginalSeries()
     {
+        return series;
     }
 
     static double[] GetReverseSeries()
