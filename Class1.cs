@@ -36,6 +36,12 @@ class SeriesAnalysis
 
     static double[] GetReverseSeries()
     {
+        double[] reverseSeries = new double[series.Length];
+        for (int i = 0; i < series.Length; i++)
+        {
+            reverseSeries[i] = series[series.Length - 1 - i];
+        }
+        return reverseSeries;
     }
 
     static double[] GetSortedSeries()
