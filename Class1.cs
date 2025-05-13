@@ -22,6 +22,11 @@ class SeriesAnalysis
     // Methods to perform operations on the series
     static string InputNewSeries()
     {
+        if (UpdateSeries("Enter a new series numbers:"))
+        {
+            return "Series updated successfully.";
+        }
+        return "Invalid input Series";
     }
 
     static double[] GetOriginalSeries()
