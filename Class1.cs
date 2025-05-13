@@ -53,6 +53,15 @@ class SeriesAnalysis
 
     static double GetMaxSeries()
     {
+        double max = series[0];
+        for (int i = 1; i < series.Length; i++)
+        {
+            if (series[i] > max)
+            {
+                max = series[i];
+            }
+        }
+        return max;
     }
 
     static double GetMinSeries()
