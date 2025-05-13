@@ -84,6 +84,7 @@ class SeriesAnalysis
 
     static int GetCountSeries()
     {
+        return series.Length;
     }
 
     static double GetSumSeries()
