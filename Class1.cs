@@ -93,18 +93,28 @@ class SeriesAnalysis
     // Display methods
     static void Print(string str)
     {
+        Console.WriteLine(str);
     }
 
     static void Print(int num)
     {
+        Console.WriteLine(num);
     }
     static void Print(double num)
     {
+        Console.WriteLine(num);
     }
 
     static void Print(double[] arr)
     {
+        string result = "";
+        foreach (double num in arr)
+        {
+            result += num + " ";
+        }
+        Console.WriteLine(result);
     }
+    
     static string PromptAndReadInput(string messsage)
     {
     }
