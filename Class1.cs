@@ -66,6 +66,15 @@ class SeriesAnalysis
 
     static double GetMinSeries()
     {
+        double min = series[0];
+        for (int i = 1; i < series.Length; i++)
+        {
+            if (series[i] < min)
+            {
+                min = series[i];
+            }
+        }
+        return min;
     }
 
     static double GetAvgSeries()
