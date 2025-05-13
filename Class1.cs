@@ -77,6 +77,7 @@ class SeriesAnalysis
 
     static bool IsValidOptionInput(string choice)
     {
+        return menuOptions.ContainsKey(choice);
     }
 
     static bool HasLeastThreeArgs(string[] args)
