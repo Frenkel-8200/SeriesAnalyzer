@@ -67,6 +67,13 @@ class SeriesAnalysis
 
     static bool UpdateSeries(string message)
     {
+        string[] input = PromptAndReadInput(message).Split(' ');
+        if (IsValidSeriesInput(input))
+        {
+            series = ConvertArrayStringToDouble(input);
+            return true;
+        }
+        return false;
     }
 
     // Validation methods
