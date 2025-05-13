@@ -87,6 +87,12 @@ class SeriesAnalysis
 
     static double GetSumSeries()
     {
+        double sum = 0;
+        foreach (double value in series)
+        {
+            sum += value;
+        }
+        return sum;
     }
 
     static string Exit()
